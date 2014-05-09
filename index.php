@@ -27,7 +27,7 @@ if ( (!isset($_GET['eoc'])) || (!array_key_exists(strtolower($_GET['eoc']), $pag
 <meta name="description" content="Eric O'Callaghan<?php
 
 // Change the meta tag description if we are not on the default page
-if ($eoc != 'about') {
+if ($eoc != $default) {
 	echo " - $eocname";
 }
 
