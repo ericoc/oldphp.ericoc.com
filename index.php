@@ -55,21 +55,23 @@ if ($eoc != $default) {
 // Loop through $pages array and show a navigation button/tab for each page
 foreach ($pages as $page => $pagename) {
 
-	echo '<li>';
+	echo '<li><a ';
 
-	// Treat current page differently
+	// Do not link the current page, just apply CSS
 	if ($page == $eoc) {
-		echo "<a id=\"current\">$eocname</a>";
+		echo 'id="current"';
 
 	// Link the default page to "/"
 	} elseif ($page == $default) {
-		echo '<a href="/">' . $pages["$default"] . '</a>';
+		echo 'href="/"';
 
 	// Link all other pages to "/whatever"
 	} else {
-		echo "<a href=\"/$page\">$pagename</a>";
+		echo 'href="/' . $page . '"';
 	}
-	echo "</li>\n";
+
+	// Show the page name
+	echo '">' . $pagename . '</a></li>' . "\n";
 }
 
 ?>
