@@ -12,17 +12,10 @@ if ( (!isset($_GET['eoc'])) || (!array_key_exists(strtolower($_GET['eoc']), $pag
 	$eoc = $default;
 	$eocname = $pages["$default"];
 
-// Otherwise, if the page was passed via the URL and does exist, loop through and set the current page
+// Otherwise, the page was passed via the URL and does exist, go with that
 } else {
-
-	$url = strtolower($_GET['eoc']);
-	foreach ($pages as $page => $pagename) {
-		if ($url == $page) {
-			$eoc = $page;
-			$eocname = $pagename;
-			break;
-		}
-	}
+	$eoc = $_GET['eoc'];
+	$eocname = $pages["$eoc"];
 }
 
 ?>
