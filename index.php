@@ -1,7 +1,7 @@
 <?php
 
 // Show any and all errors
-error_reporting(-1);
+error_reporting(E_ALL);
 
 // Create an array of pages, assigning each page a real/proper name and set a default page
 $pages = array('projects' => 'Projects', 'about' => 'About', 'resume' => 'Résumé');
