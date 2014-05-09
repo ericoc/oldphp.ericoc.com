@@ -1,0 +1,129 @@
+h1
+{
+	margin:			auto;
+	text-align:		center;
+	font-size:		4em;
+	color:			#000;
+	text-decoration:	none;
+}
+
+#logo
+{
+	font-family:		'Permanent Marker', sans-serif;
+}
+
+#logo a
+{
+	color:			#104e8b;
+	text-decoration:	none;
+}
+
+#logoblue
+{
+	color:			#4da0ff;
+}
+
+#nav
+{
+	width:			75%;
+	margin:			auto;
+	text-align:		center;
+	font-family:		Roboto;
+}
+
+#navlist
+{
+	border-bottom:		2px solid #104e8b;
+	padding:		3px;
+	padding-top:		1em;
+	font-size:		1.25em;
+}
+
+#navlist li
+{
+	display:		inline;
+	list-style:		none;
+	margin:			5%;
+}
+
+#navlist li a
+{
+	color:			#4da0ff;
+	background-color:	#fff;
+	border:			2px solid #104e8b;
+	margin-left:		1px;
+	margin-right:		1px;
+	padding-bottom:		3px;
+	padding-right:		10px;
+	padding-left:		10px;
+	padding-top:		5px;
+	text-decoration:	none;
+	font-weight:		bold;
+}
+
+#navlist li a:hover
+{
+	background-color:	#4da0ff;
+	color:			#fff;
+}
+
+#navlist li a#current
+{
+	background-color:	#fff;
+	border-bottom:		2px solid #fff;
+	color:			#4da0ff;
+}
+
+#content
+{
+	width:			75%;
+	margin:			auto;
+}
+
+#content a:link
+{
+	color:			#4da0ff;
+}
+
+#content a:hover, a:active, a:visited
+{
+	color:			#104e8b;
+}
+
+body
+{
+	background-color:	#fff;
+	font-family:		'Open Sans', sans-serif;
+}
+
+h2
+{
+	font-family:		Roboto;
+	font-size:		1.25em;
+	color:			#4da0ff;
+}
+
+h3
+{
+	font-family:		Roboto;
+	font-size:		1.1em;
+	color:			#000;
+}
+
+hr
+{
+	border:			1px solid #104e8b;
+	color:			#104e8b;
+	width:			75%;
+	
+}
+
+p
+{
+	margin-left:		3%;
+}
+
+li
+{
+	margin-left:		3%;
+}

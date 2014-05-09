@@ -1,0 +1,27 @@
+ErrorDocument 401 /401.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# Redirect HTTP /dev and dev.ericoc.com to HTTPS
+Redirect permanent /dev https://dev.ericoc.com
+RewriteCond %{HTTP_HOST} ^(www\.)?dev\.ericoc\.com.*$ [NC]
+RewriteRule ^(.*)?$ https://dev.ericoc.com [L,R=301]
+
+# Redirect to make sure people use "ericoc.com" instead of "www.", the IP, or whatever else
+RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)$ [NC]
+RewriteCond %{HTTP_HOST} !^ericoc\.com$ [NC]
+RewriteRule ^(.*)$ http://ericoc.com/$1 [L,R=301]
+
+# Rewrite /about, /projects and /resume to /?eoc=<whichever>
+RewriteRule ^(about|projects|resume)(/|\.html)?$ /?eoc=$1 [L]
+
+# Redirect /pictures and /pics to pictures. sub-domain
+RewriteRule ^pic(ture)?s(/)?(.*)?$ http://pictures.ericoc.com/$3 [L,R=301]
+
+# Redirect /subway to subway maps
+Redirect permanent /subway http://pictures.ericoc.com/subway/
+
+# Redirect /dropbox to my Dropbox account to ease public linking of files
+RewriteRule ^dropbox/(.+)$ http://dl.dropboxusercontent.com/u/23215001/$1 [L,R=301]
