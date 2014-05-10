@@ -7,12 +7,18 @@ error_reporting(E_ALL);
 $pages = array('projects' => 'Projects', 'about' => 'About', 'resume' => 'Résumé');
 $default = 'about';
 
+
+// Skip the page choosing when handling a 404 (from Apache ErrorDocument)
+if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '404') ) {
+	$eoc = $_SERVER['REDIRECT_STATUS'];
+	$eocname = 'Page Not Found';
+
 // If no page was passed via the URL or the URL passed does not exist, go with the the default page
-if ( (!isset($_GET['eoc'])) || (!array_key_exists(strtolower($_GET['eoc']), $pages)) ) {
+} elseif ( (!isset($_GET['eoc'])) || (!array_key_exists(strtolower($_GET['eoc']), $pages)) ) {
 	$eoc = $default;
 	$eocname = $pages["$default"];
 
-// Otherwise, the page was passed via the URL and does exist, go with that
+// Otherwise, the page was passed via the URL and does exist so go with that
 } else {
 	$eoc = $_GET['eoc'];
 	$eocname = $pages["$eoc"];
@@ -84,7 +90,7 @@ foreach ($pages as $page => $pagename) {
 if (@file_exists("$eoc.html")) {
 	include("$eoc.html");
 
-// Just print the same error from 404.html if the file does not exist for some reason
+// Just print an error if the file does not exist (i.e. when $eoc is '404')
 } else {
 	echo "<center>\n<h2>Sorry!</h2>\nUnfortunately, that page could not be found.\n</center>\n";
 }
