@@ -7,21 +7,23 @@ error_reporting(E_ALL);
 $pages = array('projects' => 'Projects', 'about' => 'About', 'resume' => 'Résumé');
 $default = 'about';
 
-
 // Skip the page choosing when handling a 404 (from Apache ErrorDocument)
 if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '404') ) {
 	$eoc = $_SERVER['REDIRECT_STATUS'];
 	$eocname = 'Page Not Found';
+	$eoctitle = " - $eocname";
 
 // If no page was passed via the URL or the URL passed does not exist, go with the the default page
 } elseif ( (!isset($_GET['eoc'])) || (!array_key_exists(strtolower($_GET['eoc']), $pages)) ) {
 	$eoc = $default;
 	$eocname = $pages["$default"];
+	$eoctitle = '';
 
 // Otherwise, the page was passed via the URL and does exist so go with that
 } else {
 	$eoc = $_GET['eoc'];
 	$eocname = $pages["$eoc"];
+	$eoctitle = " - $eocname";
 }
 
 ?>
@@ -30,23 +32,9 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="author" content="Eric O'Callaghan">
-<meta name="description" content="Eric O'Callaghan<?php
-
-// Change the meta tag description if we are not on the default page
-if ($eoc != $default) {
-	echo " - $eocname";
-}
-
-?>">
+<meta name="description" content="Eric O'Callaghan<?=$eoctitle; ?>">
 <meta name="keywords" content="Eric O'Callaghan, Eric OCallaghan, EricOC, Eric OC">
-<title>Eric O'Callaghan<?php
-
-// Change the title bar to include the pages real name if we are not on the default page
-if ($eoc != $default) {
-	echo " - $eocname";
-}
-
-?></title>
+<title>Eric O'Callaghan<?=$eoctitle; ?></title>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Permanent+Marker" rel="stylesheet" type="text/css">
 <link href="/ericoc.css" rel="stylesheet" type="text/css">
 </head>
