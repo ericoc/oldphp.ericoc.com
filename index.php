@@ -65,7 +65,7 @@ foreach ($pages as $page => $pagename) {
 	}
 
 	// Show the page name
-	echo '">' . $pagename . '</a></li>' . "\n";
+	echo '>' . $pagename . '</a></li>' . "\n";
 }
 
 ?>
