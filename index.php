@@ -31,6 +31,7 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="google-site-verification" content="4yRSlIeY2suoHNV99v092rtlWVP7vLHyQV7Idr8to1g" />
 <meta name="author" content="Eric O'Callaghan">
 <meta name="description" content="Eric O'Callaghan<?=$eoctitle; ?>">
 <meta name="keywords" content="Eric O'Callaghan, Eric OCallaghan, EricOC, Eric OC">
