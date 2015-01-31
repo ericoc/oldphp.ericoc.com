@@ -24,7 +24,8 @@ EXPERIENCE
 Sidecar						Philadelphia, PA
 Linux Systems Administrator			November 2013 - Present
 
-- Awesomeness!
+- Primary duties include response to any infrastructure issues as well as decision-making for all server modifications
+- Responsible for maintaining multiple separate database environments that each include replication configurations between co-located hardware and Amazon Web Services (AWS)
 
 URBN, Inc					Philadelphia, PA
 Linux Systems Administrator			September 2012 - November 2013
