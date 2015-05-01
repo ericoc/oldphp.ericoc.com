@@ -15,7 +15,7 @@ BACKGROUND
 
 * Regularly enjoy learning and playing with new things to further my own personal, technical knowledge
 * Self-taught HTML, CSS, PHP, MySQL, Bash, and very familiar with Python as well as Perl
-* Experience using and configuring many Linux network services such as httpd (Apache), iptables, lighttpd, ntpd, mysqld, bind/named, pptpd, openvpn, postfix, proftpd, vsftpd, puppet, and sshd
+* Experience using and configuring many Linux network services such as httpd (Apache), nginx, lighttpd, iptables, ntpd, mysqld, bind/named, pptpd, openvpn, postfix, vsftpd, puppet, ansible, and sshd
 * Worked with both Cisco Systems routing and switching equipment and very familiar with the Cisco Internetwork Operating System (IOS)
 
 
