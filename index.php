@@ -36,7 +36,7 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 <meta name="description" content="Eric O'Callaghan<?=$eoctitle; ?>">
 <meta name="keywords" content="Eric O'Callaghan, Eric OCallaghan, EricOC, Eric OC">
 <title>Eric O'Callaghan<?=$eoctitle; ?></title>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Permanent+Marker" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Permanent+Marker" rel="stylesheet" type="text/css">
 <link href="/ericoc.css" rel="stylesheet" type="text/css">
 </head>
 <body>
