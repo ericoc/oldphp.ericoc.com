@@ -2,24 +2,20 @@ ErrorDocument 404 /index.php
 
 RewriteEngine On
 
-# Redirect to make sure people use "ericoc.com" instead of "www.", the IP, or whatever else
-RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)$ [NC]
-RewriteCond %{HTTP_HOST} !^ericoc\.com$ [NC]
-RewriteRule ^(.*)$ http://ericoc.com/$1 [R=301]
-
-# Enforce SSL
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://ericoc.com%{REQUEST_URI} [R=301,L]
-
-# Rewrite /about, /projects and /resume to /?eoc=<whichever>
-RewriteRule ^(about|projects|resume)(/|\.html)?$ /?eoc=$1 [L]
-
 # Redirect /pictures and /pics to pictures. sub-domain
 RewriteRule ^pic(ture)?s(/)?(.*)?$ http://pictures.ericoc.com/$3 [L,R=301]
 
-# Redirect /subway to subway maps
-Redirect permanent /subway http://pictures.ericoc.com/subway/
+# Redirect /resume.{txt,pdf,docx} to HTTPS /ericoc-resume.{txt,pdf,docx}
+RewriteRule ^resume\.(txt|pdf|docx)$ https://ericoc.com/ericoc-resume.$1 [L,R=301]
 
-# Redirect /resume.{txt,pdf,docx} to /ericoc-resume.{txt,pdf,docx}
-RewriteRule ^resume\.(txt|pdf|docx)$ /ericoc-resume.$1 [L,R=301]
+# Redirect to make sure people use "ericoc.com" instead of "www.", the IP, or whatever else
+RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)$ [NC]
+RewriteCond %{HTTP_HOST} !^ericoc\.com$ [NC]
+RewriteRule ^(.*)$ https://ericoc.com/$1 [R=301]
+
+# Enforce SSL
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://ericoc.com%{REQUEST_URI} [R=301]
+
+# Rewrite /about, /projects and /resume to /?eoc=<whichever>
+RewriteRule ^(about|projects|resume)(/|\.html)?$ /?eoc=$1
