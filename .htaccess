@@ -21,8 +21,5 @@ RewriteRule ^pic(ture)?s(/)?(.*)?$ http://pictures.ericoc.com/$3 [L,R=301]
 # Redirect /subway to subway maps
 Redirect permanent /subway http://pictures.ericoc.com/subway/
 
-# Redirect /dropbox to my Dropbox account to ease public linking of files
-RewriteRule ^dropbox/(.+)$ http://dl.dropboxusercontent.com/u/23215001/$1 [L,R=301]
-
 # Redirect /resume.{txt,pdf,docx} to /ericoc-resume.{txt,pdf,docx}
 RewriteRule ^resume\.(txt|pdf|docx)$ /ericoc-resume.$1 [L,R=301]
