@@ -3,7 +3,7 @@ ErrorDocument 404 /index.php
 RewriteEngine On
 
 # Redirect /pictures and /pics to pictures. sub-domain
-RewriteRule ^pic(ture)?s(/)?(.*)?$ http://pictures.ericoc.com/$3 [L,R=301]
+RewriteRule ^pic(ture)?s(/)?(.*)?$ https://pictures.ericoc.com/$3 [L,R=301]
 
 # Redirect /resume.{txt,pdf,docx} to HTTPS /ericoc-resume.{txt,pdf,docx}
 RewriteRule ^resume\.(txt|pdf|docx)$ https://ericoc.com/ericoc-resume.$1 [L,R=301]
