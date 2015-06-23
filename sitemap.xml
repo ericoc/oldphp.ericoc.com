@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 	<url>
-		<loc>http://ericoc.com/</loc>
+		<loc>https://ericoc.com/</loc>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>http://ericoc.com/projects</loc>
+		<loc>https://ericoc.com/projects</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.9</priority>
 	</url>
 
 	<url>
-		<loc>http://ericoc.com/resume</loc>
+		<loc>https://ericoc.com/resume</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.9</priority>
 	</url>
