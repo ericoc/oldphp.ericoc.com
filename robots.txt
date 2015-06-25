@@ -1,4 +1,4 @@
-Sitemap: http://ericoc.com/sitemap.xml
+Sitemap: https://ericoc.com/sitemap.xml
 
 User-agent: ia_archiver
 Disallow: /
