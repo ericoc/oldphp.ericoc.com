@@ -46,46 +46,48 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 		</h1>
 	</div>
 	<div id="nav">
-		<ul id="navlist"><?php
+		<ul id="navlist">
+		<?php
 
-// Loop through $pages array and show a navigation button/tab for each page
-foreach ($pages as $page => $pagename) {
+			// Loop through $pages array and show a navigation button/tab for each page
+			foreach ($pages as $page => $pagename) {
 
-	echo '<li><a ';
+				echo '<li><a ';
 
-	// Do not link the current page, just apply CSS
-	if ($page == $eoc) {
-		echo 'id="current"';
+				// Do not link the current page, just apply CSS
+				if ($page == $eoc) {
+					echo 'id="current"';
 
-	// Link the default page to "/"
-	} elseif ($page == $default) {
-		echo 'href="/"';
+				// Link the default page to "/"
+				} elseif ($page == $default) {
+					echo 'href="/"';
 
-	// Link all other pages to "/whatever"
-	} else {
-		echo 'href="/' . $page . '"';
-	}
+				// Link all other pages to "/whatever"
+				} else {
+					echo 'href="/' . $page . '"';
+				}
 
-	// Show the page name
-	echo '>' . $pagename . '</a></li>' . "\n			";
-}
-
-?>
+				// Show the page name
+				echo '>' . $pagename . '</a></li>' . "\n			";
+			}
+		?>
 		</ul>
 	</div>
 	<br>
-	<div id="content"><?php
+	<div id="content">
+	<?php
 
-// Include relevant .html file for current page if it exists
-if (@file_exists("$eoc.html")) {
-	include("$eoc.html");
+		// Include relevant .html file for current page if it exists
+		if (@file_exists("$eoc.html")) {
+			include("$eoc.html");
 
-// Just print an error if the file does not exist (i.e. when $eoc is '404')
-} else {
-	echo "			<center>\n<h2>Sorry!</h2>\nUnfortunately, that page could not be found.\n</center>\n";
-}
+		// Just print an error if the file does not exist (i.e. when $eoc is '404')
+		} else {
+			echo "			<center>\n<h2>Sorry!</h2>\nUnfortunately, that page could not be found.\n</center>\n";
+		}
 
-	?></div>
+	?>
+	</div>
 	<br>
 </body>
 </html>
