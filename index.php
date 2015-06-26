@@ -30,22 +30,23 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="google-site-verification" content="4yRSlIeY2suoHNV99v092rtlWVP7vLHyQV7Idr8to1g" />
-<meta name="author" content="Eric O'Callaghan">
-<meta name="description" content="Eric O'Callaghan<?=$eoctitle; ?>">
-<meta name="keywords" content="Eric O'Callaghan, Eric OCallaghan, EricOC, Eric OC">
-<title>Eric O'Callaghan<?=$eoctitle; ?></title>
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Permanent+Marker" rel="stylesheet" type="text/css">
-<link href="/ericoc.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="google-site-verification" content="4yRSlIeY2suoHNV99v092rtlWVP7vLHyQV7Idr8to1g" />
+	<meta name="author" content="Eric O'Callaghan">
+	<meta name="description" content="Eric O'Callaghan<?=$eoctitle; ?>">
+	<meta name="keywords" content="Eric O'Callaghan, Eric OCallaghan, EricOC, Eric OC">
+	<title>Eric O'Callaghan<?=$eoctitle; ?></title>
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Permanent+Marker" rel="stylesheet" type="text/css">
+	<link href="/ericoc.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="logo">
-<h1><a href="/"><span id="logoblue">Eric O'C</span>allaghan</a></h1>
-</div>
-<div id="nav">
-<ul id="navlist">
-<?php
+	<div id="logo">
+		<h1>
+			<a href="/"><span id="logoblue">Eric O'C</span>allaghan</a>
+		</h1>
+	</div>
+	<div id="nav">
+		<ul id="navlist"><?php
 
 // Loop through $pages array and show a navigation button/tab for each page
 foreach ($pages as $page => $pagename) {
@@ -66,14 +67,14 @@ foreach ($pages as $page => $pagename) {
 	}
 
 	// Show the page name
-	echo '>' . $pagename . '</a></li>' . "\n";
+	echo '>' . $pagename . '</a></li>' . "\n			";
 }
 
 ?>
-</ul>
-</div><br>
-<div id="content">
-<?php
+		</ul>
+	</div>
+	<br>
+	<div id="content"><?php
 
 // Include relevant .html file for current page if it exists
 if (@file_exists("$eoc.html")) {
@@ -81,10 +82,10 @@ if (@file_exists("$eoc.html")) {
 
 // Just print an error if the file does not exist (i.e. when $eoc is '404')
 } else {
-	echo "<center>\n<h2>Sorry!</h2>\nUnfortunately, that page could not be found.\n</center>\n";
+	echo "			<center>\n<h2>Sorry!</h2>\nUnfortunately, that page could not be found.\n</center>\n";
 }
 
-?>
-</div><br>
+	?></div>
+	<br>
 </body>
 </html>
