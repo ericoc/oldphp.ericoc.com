@@ -47,12 +47,12 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 	</div>
 	<div id="nav">
 		<ul id="navlist">
-		<?php
+<?php
 
 			// Loop through $pages array and show a navigation button/tab for each page
 			foreach ($pages as $page => $pagename) {
 
-				echo '<li><a ';
+				echo '			<li><a ';
 
 				// Do not link the current page, just apply CSS
 				if ($page == $eoc) {
@@ -68,14 +68,14 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 				}
 
 				// Show the page name
-				echo '>' . $pagename . '</a></li>' . "\n			";
+				echo '>' . $pagename . '</a></li>' . "\n";
 			}
-		?>
+?>
 		</ul>
 	</div>
 	<br>
 	<div id="content">
-	<?php
+<?php
 
 		// Include relevant .html file for current page if it exists
 		if (@file_exists("$eoc.html")) {
@@ -86,7 +86,7 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 			echo "			<center>\n<h2>Sorry!</h2>\nUnfortunately, that page could not be found.\n</center>\n";
 		}
 
-	?>
+?>
 	</div>
 	<br>
 </body>
