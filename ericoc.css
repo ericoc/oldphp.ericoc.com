@@ -1,3 +1,37 @@
+@font-face {
+	font-family:	'Open Sans';
+	font-style:	normal;
+	font-weight:	400;
+	src:		local('Open Sans'), local('OpenSans'), url('/OpenSans.ttf') format('truetype');
+}
+
+@font-face {
+	font-family:	'Open Sans';
+	font-style:	normal;
+	font-weight:	700 ;
+	src:		local('Open Sans Bold'), local('OpenSans-Bold'), url('/OpenSansBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family:	'Permanent Marker';
+	font-style:	normal;
+	font-weight:	400;
+	src:		local('Permanent Marker'), local('PermanentMarker'), url('/PermanentMarker.ttf') format('truetype');
+}
+
+@font-face {
+	font-family:	'Roboto';
+	font-style:	normal;
+	font-weight:	400;
+	src:		local('Roboto'), local('Roboto-Regular'), url('/Roboto.ttf') format('truetype');
+}
+@font-face {
+	font-family:	'Roboto';
+	font-style:	normal;
+	font-weight:	700;
+	src:		local('Roboto Bold'), local('Roboto-Bold'), url('/RobotoBold.ttf') format('truetype');
+}
+
 h1 {
 	margin:			auto;
 	text-align:		center;
