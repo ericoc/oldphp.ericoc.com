@@ -46,10 +46,9 @@ h1 {
 <tr class='header'>
 <td>Kiosk #</td>
 <td>Name</td>
-<td>Bikes Available</td>
-<td>Docks Available</td>
-<td>Total Docks</td>
+<td>Bikes</td>
 <td></td>
+<td>Docks</td>
 </tr>
 <?php
 
@@ -70,7 +69,7 @@ curl_close($c);
 $decoded = json_decode($r);
 
 // Totals start at zero
-$totalbikesavailable = $totaldocksavailable = $totaldocks = $totalstations = 0;
+$totalbikesavailable = $totaldocksavailable = $totalstations = 0;
 
 // Loop through each bike-share station
 foreach ($decoded->features as $features) {
@@ -83,8 +82,7 @@ foreach ($decoded->features as $features) {
 	// Create an array of the current stations dock counts
 	$docks = array(
 		'used'	=>	$features->properties->bikesAvailable,	// Bikes at the station
-		'free'	=>	$features->properties->docksAvailable,	// Free docks at the station
-		'total'	=>	$features->properties->totalDocks	// Total number of docks at the station (should be used+free, but not always?)
+		'free'	=>	$features->properties->docksAvailable	// Free docks at the station
 	);
 
 	// Get the current stations kiosk ID #, name, and address with zip code
@@ -92,13 +90,11 @@ foreach ($decoded->features as $features) {
 	$name		=	$features->properties->name;
 	$address	=	$features->properties->addressStreet . ' (' . $features->properties->addressZipCode . ')';
 
-	// List the current stations information in a unique table row!
+	// List the current stations information in a unique table row
 	echo "<tr>\n";
 	echo "<td><a href='#$id' id='$id'>$id</a></td>\n";	// Anchor link to the station/kiosk IDs
 	echo "<td><span title='$address'>$name</span></td>\n";	// Hover text on the name shows address+zip code, but doesn't work on mobile :/
-	echo "<td>" . $docks['used'] . "</td>\n";
-	echo "<td>" . $docks['free'] . "</td>\n";
-	echo "<td>" . $docks['total'] . "</td>\n";
+	echo "<td>" . $docks['used'] . "</td>\n";		// Number of bikes available at the station
 
 	// Print a pretty graph of stylized blocks for bikes at the current station
 	echo "<td><span class='bikes'>";
@@ -113,12 +109,15 @@ foreach ($decoded->features as $features) {
 		echo "█";
 	}
 	echo "</span>";
+
+	// Show the available dock count for current station
+	echo "<td>" . $docks['free'] . "</td>\n";
+
 	echo "</tr>\n";
 
 	// Add the current stations counts to the totals
 	$totalbikesavailable	+= $docks['used'];
 	$totaldocksavailable	+= $docks['free'];
-	$totaldocks		+= $docks['total'];
 	$totalstations++;
 
 	// Forget the current stations data
@@ -130,9 +129,8 @@ echo "<tr class='header'>\n";
 echo "<td>Totals</td>\n";
 echo "<td>$totalstations stations</td>\n";
 echo "<td>$totalbikesavailable</td>\n";
-echo "<td>$totaldocksavailable</td>\n";
-echo "<td>$totaldocks</td>\n";
 echo "<td></td>\n";
+echo "<td>$totaldocksavailable</td>\n";
 echo "</tr>\n";
 
 // Yay! link to the API
