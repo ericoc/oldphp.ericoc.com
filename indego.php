@@ -18,20 +18,30 @@ table, tr, td {
 }
 
 tr:nth-child(2n) {
-	background-color: #ddd;
+	background-color: #eee;
 }
 
 .bikes {
-	color: #0b0;
+//	color: #0b0;
+	color: #16216a;
 }
 
 .docks {
-	color: #b00;
+//	color: #b00;
+	color: #777;
 }
+
+h1 {
+	color: #16216a;
+	text-decoration: underline;
+	font-family: Tahoma, sans-serif;
+}
+
 -->
 </style>
 </head>
 <body>
+<h1><a href='<?php echo $_SERVER['PHP_SELF']; ?>'>Indego Bikes</a></h1>
 <table>
 <tr class='header'>
 <td>Kiosk#</td>
@@ -89,14 +99,14 @@ foreach ($decoded->features as $features) {
 	echo "<td>" . $docks['free'] . "</td>\n";
 	echo "<td>" . $docks['total'] . "</td>\n";
 
-	// Print a pretty graph of green blocks for bikes at the currentstation
+	// Print a pretty graph of stylized blocks for bikes at the currentstation
 	echo "<td><span class='bikes'>";
 	for ($bike = 0; $bike < $docks['used']; $bike++) {
 		echo "█";
 	}
 	echo "</span>";
 
-	// And print another pretty graph of red blocks for empty docks at the current station
+	// And print another pretty graph of stylized blocks for empty docks at the current station
 	echo "<span class='docks'>";
 	for ($dock = 0; $dock < $docks['free']; $dock++) {
 		echo "█";
