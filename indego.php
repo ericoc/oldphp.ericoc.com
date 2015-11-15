@@ -22,12 +22,10 @@ tr:nth-child(2n) {
 }
 
 .bikes {
-//	color: #0b0;
 	color: #16216a;
 }
 
 .docks {
-//	color: #b00;
 	color: #777;
 }
 
@@ -137,6 +135,9 @@ echo "</tr>\n";
 ?>
 </table>
 <br>
-<pre>courtesy of <?php echo "<a href='$url' target='_blank'>$url</a>"; ?></pre>
+<pre>
+courtesy of <?php echo "<a href='$url' target='_blank'>$url</a>"; ?><br>
+<a href='https://github.com/ericoc/ericoc.com/blob/master/indego.php' target='_blank'>view source @ github</a>
+</pre>
 </body>
 </html>
