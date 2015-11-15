@@ -44,8 +44,8 @@ h1 {
 <h1><a href='<?php echo $_SERVER['PHP_SELF']; ?>'>Indego Bikes</a></h1>
 <table>
 <tr class='header'>
-<td>Kiosk#</td>
-<td>Location</td>
+<td>Kiosk #</td>
+<td>Name</td>
 <td>Bikes Available</td>
 <td>Docks Available</td>
 <td>Total Docks</td>
@@ -87,19 +87,20 @@ foreach ($decoded->features as $features) {
 		'total'	=>	$features->properties->totalDocks	// Total number of docks at the station (should be used+free, but not always?)
 	);
 
-	// Get the current stations kiosk ID # and address with zip code
+	// Get the current stations kiosk ID #, name, and address with zip code
 	$id		=	$features->properties->kioskId;
+	$name		=	$features->properties->name;
 	$address	=	$features->properties->addressStreet . ' (' . $features->properties->addressZipCode . ')';
 
 	// List the current stations information in a unique table row!
 	echo "<tr>\n";
-	echo "<td><a href='#$id' id='$id'>" . $id . "</a></td>\n";
-	echo "<td>" . $address . "</td>\n";
+	echo "<td><a href='#$id' id='$id'>$id</a></td>\n";	// Anchor link to the station/kiosk IDs
+	echo "<td><span title='$address'>$name</span></td>\n";	// Hover text on the name shows address+zip code, but doesn't work on mobile :/
 	echo "<td>" . $docks['used'] . "</td>\n";
 	echo "<td>" . $docks['free'] . "</td>\n";
 	echo "<td>" . $docks['total'] . "</td>\n";
 
-	// Print a pretty graph of stylized blocks for bikes at the currentstation
+	// Print a pretty graph of stylized blocks for bikes at the current station
 	echo "<td><span class='bikes'>";
 	for ($bike = 0; $bike < $docks['used']; $bike++) {
 		echo "█";
@@ -121,7 +122,7 @@ foreach ($decoded->features as $features) {
 	$totalstations++;
 
 	// Forget the current stations data
-	unset($id, $address, $docks);
+	unset($id, $name, $address, $docks);
 }
 
 // Show the total counts at the bottom of our table
