@@ -69,6 +69,27 @@ $decoded = json_decode($r);
 // Totals start at zero
 $totalbikesavailable = $totaldocksavailable = $totalstations = 0;
 
+// Create a function to make pretty dock/bike graphs
+function make_graph($bikes, $docks) {
+
+	// Make a pretty graph of stylized blocks for bikes at the current station
+	$graph = '<span class="bikes">';
+	for ($bike = 0; $bike < $bikes; $bike++) {
+		$graph .= '█';
+	}
+	$graph .= '</span>';
+
+	// And another pretty graph of stylized blocks for empty docks at the current station
+	$graph .= '<span class="docks">';
+	for ($dock = 0; $dock < $docks; $dock++) {
+		$graph .= '█';
+	}
+	$graph .= '</span>';
+
+	// Return the graph
+	return $graph;
+}
+
 // Loop through each bike-share station
 foreach ($decoded->features as $features) {
 
@@ -77,49 +98,29 @@ foreach ($decoded->features as $features) {
 		continue;
 	}
 
-	// Create an array of the current stations dock counts
-	$docks = array(
-		'used'	=>	$features->properties->bikesAvailable,	// Bikes at the station
-		'free'	=>	$features->properties->docksAvailable	// Free docks at the station
-	);
-
-	// Get the current stations kiosk ID #, name, and address with zip code
+	// Get the current stations kiosk ID #, name, address with zip code, bikes, and docks
 	$id		=	$features->properties->kioskId;
 	$name		=	$features->properties->name;
 	$address	=	$features->properties->addressStreet . ' (' . $features->properties->addressZipCode . ')';
+	$bikes		=	$features->properties->bikesAvailable;
+	$docks		=	$features->properties->docksAvailable;
 
 	// List the current stations information in a unique table row
 	echo "<tr>\n";
 	echo "<td><a href='#$id' id='$id'>$id</a></td>\n";	// Anchor link to the station/kiosk IDs
 	echo "<td><span title='$address'>$name</span></td>\n";	// Hover text on the name shows address+zip code, but doesn't work on mobile :/
-	echo "<td>" . $docks['used'] . "</td>\n";		// Number of bikes available at the station
-
-	// Print a pretty graph of stylized blocks for bikes at the current station
-	echo "<td><span class='bikes'>";
-	for ($bike = 0; $bike < $docks['used']; $bike++) {
-		echo "█";
-	}
-	echo "</span>";
-
-	// And print another pretty graph of stylized blocks for empty docks at the current station
-	echo "<span class='docks'>";
-	for ($dock = 0; $dock < $docks['free']; $dock++) {
-		echo "█";
-	}
-	echo "</span>";
-
-	// Show the available dock count for current station
-	echo "<td>" . $docks['free'] . "</td>\n";
-
+	echo "<td>$bikes</td>\n";				// Number of bikes available at the station
+	echo "<td>" . make_graph($bikes, $docks) . "</td>\n";	// Generate and show pretty graph of bikes vs. docks at the station
+	echo "<td>$docks</td>\n";				// Number of docks available at the station
 	echo "</tr>\n";
 
 	// Add the current stations counts to the totals
-	$totalbikesavailable	+= $docks['used'];
-	$totaldocksavailable	+= $docks['free'];
+	$totalbikesavailable	+= $bikes;
+	$totaldocksavailable	+= $docks;
 	$totalstations++;
 
 	// Forget the current stations data
-	unset($id, $name, $address, $docks);
+	unset($id, $name, $address, $bikes, $docks);
 }
 
 // Show the total counts at the bottom of our table
