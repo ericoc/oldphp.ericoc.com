@@ -22,3 +22,6 @@ RewriteRule ^(about|projects|resume)(/|\.html)?$ /?eoc=$1
 
 # Rewrite /indego(/?) to /indego.php
 RewriteRule ^indego(/?)$ /indego.php
+
+# Rewrite bike emoji to /indego.php
+RewriteRule ^🚲$ /indego.php

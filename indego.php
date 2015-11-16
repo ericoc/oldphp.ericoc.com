@@ -75,14 +75,26 @@ function make_graph($bikes, $docks) {
 	// Make a pretty graph of stylized blocks for bikes at the current station
 	$graph = '<span class="bikes">';
 	for ($bike = 0; $bike < $bikes; $bike++) {
-		$graph .= '█';
+
+		// If hitting the bike emoji URL, use bike emojis to represent bikes
+		if ($_SERVER['REQUEST_URI'] == '/%F0%9F%9A%B2') {
+			$graph .= '🚲 ';
+		} else {
+			$graph .= '█';
+		}
 	}
 	$graph .= '</span>';
 
 	// And another pretty graph of stylized blocks for empty docks at the current station
 	$graph .= '<span class="docks">';
 	for ($dock = 0; $dock < $docks; $dock++) {
-		$graph .= '█';
+
+		// If hitting the bike emoji URL, use hyphens to represent empty docks
+		if ($_SERVER['REQUEST_URI'] == '/%F0%9F%9A%B2') {
+			$graph .= '-';
+		} else {
+			$graph .= '█';
+		}
 	}
 	$graph .= '</span>';
 
