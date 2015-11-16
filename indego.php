@@ -67,7 +67,7 @@ curl_close($c);
 $decoded = json_decode($r);
 
 // Totals start at zero
-$totalbikesavailable = $totaldocksavailable = $totalstations = 0;
+$totalbikes = $totaldocks = $totalstations = 0;
 
 // Create a function to make pretty dock/bike graphs
 function make_graph($bikes, $docks) {
@@ -99,11 +99,11 @@ foreach ($decoded->features as $features) {
 	}
 
 	// Get the current stations kiosk ID #, name, address with zip code, bikes, and docks
-	$id		=	$features->properties->kioskId;
-	$name		=	$features->properties->name;
-	$address	=	$features->properties->addressStreet . ' (' . $features->properties->addressZipCode . ')';
-	$bikes		=	$features->properties->bikesAvailable;
-	$docks		=	$features->properties->docksAvailable;
+	$id		= $features->properties->kioskId;
+	$name		= $features->properties->name;
+	$address	= $features->properties->addressStreet . ' (' . $features->properties->addressZipCode . ')';
+	$bikes		= $features->properties->bikesAvailable;
+	$docks		= $features->properties->docksAvailable;
 
 	// List the current stations information in a unique table row
 	echo "<tr>\n";
@@ -115,8 +115,8 @@ foreach ($decoded->features as $features) {
 	echo "</tr>\n";
 
 	// Add the current stations counts to the totals
-	$totalbikesavailable	+= $bikes;
-	$totaldocksavailable	+= $docks;
+	$totalbikes += $bikes;
+	$totaldocks += $docks;
 	$totalstations++;
 
 	// Forget the current stations data
@@ -127,9 +127,9 @@ foreach ($decoded->features as $features) {
 echo "<tr class='header'>\n";
 echo "<td>Totals</td>\n";
 echo "<td>$totalstations stations</td>\n";
-echo "<td>$totalbikesavailable</td>\n";
+echo "<td>$totalbikes</td>\n";
 echo "<td></td>\n";
-echo "<td>$totaldocksavailable</td>\n";
+echo "<td>$totaldocks</td>\n";
 echo "</tr>\n";
 
 // Yay! link to the API
