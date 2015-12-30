@@ -10,7 +10,7 @@ class Indego {
 	private function findStations() {
 
 		// Specify the Indego bikes API URL
-		$url = 'https://api.phila.gov/bike-share-stations/v1';
+		$url = 'https://www.rideindego.com/stations/json/';
 
 		// Specify a friendly user-agent to hit the API with
 		$user_agent = 'Indego PHP API Library - https://github.com/ericoc/indego-php-lib';
@@ -226,7 +226,7 @@ echo "</tr>\n";
 </table>
 <br>
 <pre>
-courtesy of <a href='https://api.phila.gov/bike-share-stations/v1' target='_blank'>https://api.phila.gov/bike-share-stations/v1</a><br>
+courtesy of <a href='https://www.rideindego.com/stations/json/' target='_blank'>https://www.rideindego.com/stations/json/</a><br>
 <a href='https://github.com/ericoc/ericoc.com/blob/master/indego.php' target='_blank'>view source @ github</a> | <a href='https://github.com/ericoc/indego-php-lib' target='_blank'>my Indego PHP library</a>
 </pre>
 </body>
