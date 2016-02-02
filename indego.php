@@ -150,6 +150,10 @@ tr:nth-child(2n) {
 	background-color: #eee;
 }
 
+tr:target {
+	background-color: orange;
+}
+
 .bikes {
 	color: #16216a;
 }
@@ -198,8 +202,8 @@ foreach ($stations as $station) {
 	$address = $station->addressStreet . ' (' . $station->addressZipCode . ')';
 
 	// List the current stations information in a unique table row
-	echo "<tr>\n";
-	echo "<td><a href='#$station->kioskId' id='$station->kioskId'>$station->kioskId</a></td>\n";			// Anchor link to the station/kiosk IDs
+	echo "<tr id='$station->kioskId'>\n";
+	echo "<td><a href='#$station->kioskId'>$station->kioskId</a></td>\n";				// Anchor link to the station/kiosk IDs
 	echo "<td><span title='$address'>$station->name</span></td>\n";					// Hover text on the name shows address+zip code, but doesn't work on mobile :/
 	echo "<td>$station->bikesAvailable</td>\n";							// Number of bikes available at the station
 	echo "<td>" . make_graph($station->bikesAvailable, $station->docksAvailable) . "</td>\n";	// Generate and show pretty graph of bikes vs. docks at the station
