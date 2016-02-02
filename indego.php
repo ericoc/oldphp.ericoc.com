@@ -183,9 +183,16 @@ h1 {
 </tr>
 <?php
 
+// Use search term if one was given, otherwise blank returns all stations
+if (isset($_GET['search'])) {
+	$search = $_GET['search'];
+} else {
+	$search = '';
+}
+
 // Instantiate the Indego class and get stations
 $indego = new Indego;
-$stations = $indego->getStations();
+$stations = $indego->getStations($search);
 
 // Totals start at zero
 $totalbikes = $totaldocks = $totalstations = 0;
@@ -216,6 +223,11 @@ foreach ($stations as $station) {
 	$totalstations++;
 }
 
+// Show a nice message if no active stations instead of leaving empty table
+if ($totalstations == 0) {
+	echo "<tr><td align='center' colspan='5'><i>No active stations found!</i><td></tr>\n";
+}
+
 // Show the total counts at the bottom of our table
 echo "<tr class='header'>\n";
 echo "<td>Totals</td>\n";
@@ -225,10 +237,13 @@ echo "<td></td>\n";
 echo "<td>$totaldocks</td>\n";
 echo "</tr>\n";
 
-// Yay - links below!
+// Yay - search form and links below!
 ?>
 </table>
 <br>
+<form method="get">
+<input type="text" name="search"> <i>(i.e. "<a href="?search=fairmount">fairmount</a>" or "<a href="?search=19107">19107</a>")</i>
+<input type="submit" value="Search!">
 <pre>
 courtesy of <a href='https://www.rideindego.com/stations/json/' target='_blank'>https://www.rideindego.com/stations/json/</a><br>
 <a href='https://github.com/ericoc/ericoc.com/blob/master/indego.php' target='_blank'>view source @ github</a> | <a href='https://github.com/ericoc/indego-php-lib' target='_blank'>my Indego PHP library</a>
