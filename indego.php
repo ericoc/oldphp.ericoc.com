@@ -246,9 +246,7 @@ echo "			</tr>\n";
 		<input type='text' name='search'> <i>(i.e. "<a href='?search=fairmount'>fairmount</a>" or "<a href='?search=19107'>19107</a>")</i>
 		<input type='submit' value='Search!'>
 		</form>
-		<pre>
-			courtesy of <a href='https://www.rideindego.com/stations/json/' target='_blank'>https://www.rideindego.com/stations/json/</a><br>
-			<a href='https://github.com/ericoc/ericoc.com/blob/master/indego.php' target='_blank'>view source @ github</a> | <a href='https://github.com/ericoc/indego-php-lib' target='_blank'>my Indego PHP library</a>
-		</pre>
+		<pre>courtesy of <a href='https://www.rideindego.com/stations/json/' target='_blank'>https://www.rideindego.com/stations/json/</a></pre><br>
+		<pre><a href='https://github.com/ericoc/ericoc.com/blob/master/indego.php' target='_blank'>view source @ github</a> | <a href='https://github.com/ericoc/indego-php-lib' target='_blank'>my Indego PHP library</a></pre>
 	</body>
 </html>
