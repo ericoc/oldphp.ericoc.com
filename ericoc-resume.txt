@@ -21,8 +21,11 @@ BACKGROUND
 
 EXPERIENCE
 
+Comcast Corporation				Philadelphia, PA
+Linux Engineer					April 2016 - Present
+
 Sidecar						Philadelphia, PA
-Linux Systems Administrator			November 2013 - Present
+Linux Systems Administrator			November 2013 - April 2016
 
 - Primary duties include response to any infrastructure issues as well as decision-making for all server modifications
 - Responsible for maintaining multiple separate database environments that each include replication configurations between co-located hardware and Amazon Web Services (AWS)
@@ -44,12 +47,6 @@ Patient Advocate Foundation			March - April 2010
 
 - Created multiple, interactive web applications using PHP and MySQL which eased the management of data for both the Lead Web Developer and Human Resources department
 - Helped set up a small, on-site datacenter as the company moved to a new office location
-
-Directorate of Information Management		Fort Eustis, VA
-Office Automation Clerk				June - September 2008
-
-- Enjoyed management of information technology in a government facility (Department of Defense / U.S. Army) while assisting both the Network Team and Help Desk as a temporary summer hire
-- Introduced to a large network, spanning the military installation, which required routine installation, maintenance, and configuration of Cisco equipment
 
 
 EDUCATION
