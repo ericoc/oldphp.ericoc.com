@@ -93,29 +93,33 @@ class Indego {
 	}
 }
 
-// Create a function to make pretty dock/bike graphs
-function make_graph($bikes, $docks) {
+// Create a function to make pretty dock/bike graphs with or without emojis
+function make_graph($bikes, $docks, $emoji = false) {
 
-	// Make a pretty graph of stylized blocks for bikes at the current station
+	// Make a pretty graph for bikes at the current station
 	$graph = '<span class="bikes">';
 	for ($bike = 0; $bike < $bikes; $bike++) {
 
 		// If hitting the bike emoji URL, use bike emojis to represent bikes
-		if ($_SERVER['REQUEST_URI'] == '/%F0%9F%9A%B2') {
+		if ($emoji) {
 			$graph .= '🚲 ';
+
+		// Otherwise, use stylized blocks for bikes normally
 		} else {
 			$graph .= '█';
 		}
 	}
 	$graph .= '</span>';
 
-	// And another pretty graph of stylized blocks for empty docks at the current station
+	// And another pretty graph for empty docks at the current station
 	$graph .= '<span class="docks">';
 	for ($dock = 0; $dock < $docks; $dock++) {
 
 		// If hitting the bike emoji URL, use hyphens to represent empty docks
-		if ($_SERVER['REQUEST_URI'] == '/%F0%9F%9A%B2') {
+		if ($emoji) {
 			$graph .= '-';
+
+		// Otherwise, use stylized blocks for empty docks normally
 		} else {
 			$graph .= '█';
 		}
@@ -189,6 +193,14 @@ if (isset($_GET['search'])) {
 	$search = '';
 }
 
+// Determine whether the bike emoji URL is being hit with a case-insensitive match
+// Use this later to decide whether to display bike/dock graphs with emojis or not
+if (preg_match('/^\/%F0%9F%9A%B2(\/)?(\?search=[a-z0-9]+)?$/i', $_SERVER['REQUEST_URI'])) {
+        $emoji = true;
+} else {
+        $emoji = false;
+}
+
 // Instantiate the Indego class and get stations
 $indego = new Indego;
 $stations = $indego->getStations($search);
@@ -209,11 +221,11 @@ foreach ($stations as $station) {
 
 	// List the current stations information in a unique table row
 	echo "			<tr id='$station->kioskId'>\n";
-	echo "				<td><a href='#$station->kioskId'>$station->kioskId</a></td>\n";				// Anchor link to the station/kiosk IDs
-	echo "				<td><span title='$address'>$station->name</span></td>\n";				// Hover text on the name shows address+zip code, but doesn't work on mobile :/
-	echo "				<td>$station->bikesAvailable</td>\n";							// Number of bikes available at the station
-	echo "				<td>" . make_graph($station->bikesAvailable, $station->docksAvailable) . "</td>\n";	// Generate and show pretty graph of bikes vs. docks at the station
-	echo "				<td>$station->docksAvailable</td>\n";							// Number of docks available at the station
+	echo "				<td><a href='#$station->kioskId'>$station->kioskId</a></td>\n";					// Anchor link to the station/kiosk IDs
+	echo "				<td><span title='$address'>$station->name</span></td>\n";					// Hover text on the name shows address+zip code, but doesn't work on mobile :/
+	echo "				<td>$station->bikesAvailable</td>\n";								// Number of bikes available at the station
+	echo "				<td>" . make_graph($station->bikesAvailable, $station->docksAvailable, $emoji) . "</td>\n";	// Generate and show pretty graph of bikes vs. docks at the station with or without emojis
+	echo "				<td>$station->docksAvailable</td>\n";								// Number of docks available at the station
 	echo "			</tr>\n";
 
 	// Add the current stations counts to the totals
