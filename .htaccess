@@ -8,6 +8,10 @@ RewriteRule ^pic(ture)?s(/)?(.*)?$ https://pictures.ericoc.com/$3 [L,R=301]
 # Redirect /resume.{txt,pdf,docx} to HTTPS /ericoc-resume.{txt,pdf,docx}
 RewriteRule ^resume\.(txt|pdf|docx)$ https://ericoc.com/ericoc-resume.$1 [L,R=301]
 
+# Redirect bike emoji sub-domain to bike emoji folder that gets rewritten again below
+RewriteCond %{HTTP_HOST} ^xn--h78h\.ericoc\.com$ [NC]
+RewriteRule ^(.*)$ https://ericoc.com/🚲 [L,R=301]
+
 # Redirect to make sure people use "ericoc.com" instead of "www.", the IP, or whatever else
 RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)$ [NC]
 RewriteCond %{HTTP_HOST} !^ericoc\.com$ [NC]
