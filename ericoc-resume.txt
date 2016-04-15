@@ -42,8 +42,8 @@ Linux Technical Support				July 2010 - August 2012
 - Provided quick and helpful technical support to a large number of customers via telephone, e-mail, and support tickets which involved troubleshooting a wide variety of issues including routing inconsistencies between numerous transit providers across the world
 - Regularly communicated with international datacenters while reacting quickly to service-affecting emergencies
 
-IT Intern					Newport News, VA
-Patient Advocate Foundation			March - April 2010
+Patient Advocation Foundation			Newport News, VA
+IT Intern					March - April 2010
 
 - Created multiple, interactive web applications using PHP and MySQL which eased the management of data for both the Lead Web Developer and Human Resources department
 - Helped set up a small, on-site datacenter as the company moved to a new office location
