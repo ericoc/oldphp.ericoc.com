@@ -132,7 +132,7 @@ function make_graph($bikes, $docks, $emoji = false) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Indego Bikes!</title>
