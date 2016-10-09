@@ -7,4 +7,4 @@ User-agent: Baiduspider
 Disallow: /
 
 User-agent: *
-Disallow /pictures/
+Disallow: /pictures/
