@@ -74,6 +74,10 @@ h1 {
 	color:	#104e8b;
 }
 
+#reslinks {
+	text-align: center;
+}
+
 body {
 	background-color:	#fff;
 	font-family:		'Open Sans', sans-serif;
