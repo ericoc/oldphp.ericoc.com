@@ -135,44 +135,8 @@ function make_graph($bikes, $docks, $emoji = false) {
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="/indego.css" rel="stylesheet" type="text/css">
 		<title>Indego Bikes!</title>
-		<style type="text/css">
-		<!--
-			.header {
-				font-weight:	bold;
-				border:		1px solid #000;
-				font-family:	Tahoma, sans-serif;
-			}
-
-			table, tr, td {
-				border-collapse:	collapse;
-				border:			1px dotted #000;
-			}
-
-			tr:nth-child(2n) {
-				background-color:	#eee;
-			}
-
-			tr:target {
-				background-color:	orange;
-			}
-
-			.bikes {
-				color:	#16216a;
-			}
-
-			.docks {
-				color:	#777;
-			}
-
-			h1 {
-				color:			#16216a;
-				text-decoration:	underline;
-				font-family:		Tahoma, sans-serif;
-			}
-
-		-->
-		</style>
 	</head>
 	<body>
 		<h1><a href='<?php echo $_SERVER['PHP_SELF']; ?>'>Indego Bikes</a></h1>
