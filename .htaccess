@@ -1,31 +1,28 @@
-ErrorDocument 404 /index.php
+ErrorDocument	404	/index.php
 
 RewriteEngine On
 
+# Redirect /indego.php to indego. subdomain
+RewriteRule	^indego\.php(.*)?$		https://indego.ericoc.com/$1	[R=301,L]
+
+# Redirect /indego, /bikes, and bike emoji to appropriate sub-domain
+RewriteRule	^(indego|bikes)(\.php|/)?(.*)?$	https://$1.ericoc.com/$3	[R=301,L]
+RewriteRule	^🚲(/)?(.*)?$			https://xn--h78h.ericoc.com/$2	[R=301,L]
+
 # Redirect /pictures and /pics to pictures. sub-domain
-RewriteRule ^pic(ture)?s(/)?(.*)?$ https://pictures.ericoc.com/$3 [L,R=301]
+RewriteRule	^pic(ture)?s(/)?(.*)?$		https://pictures.ericoc.com/$3	[R=301,L]
 
 # Redirect /resume.{txt,pdf,docx} to HTTPS /ericoc-resume.{txt,pdf,docx}
-RewriteRule ^resume\.(txt|pdf|docx)$ https://ericoc.com/ericoc-resume.$1 [L,R=301]
-
-# Redirect bike emoji sub-domain to bike emoji folder that gets rewritten again below
-RewriteCond %{HTTP_HOST} ^xn--h78h\.ericoc\.com$ [NC]
-RewriteRule ^(.*)$ https://ericoc.com/🚲 [L,R=301]
+RewriteRule	^resume\.(txt|pdf|docx)$	https://ericoc.com/ericoc-resume.$1	[R=301,L]
 
 # Redirect to make sure people use "ericoc.com" instead of "www.", the IP, or whatever else
-RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)$ [NC]
-RewriteCond %{HTTP_HOST} !^ericoc\.com$ [NC]
-RewriteRule ^(.*)$ https://ericoc.com/$1 [R=301]
+RewriteCond	%{HTTP_HOST}	!^(localhost|127.0.0.1)$	[NC]
+RewriteCond	%{HTTP_HOST}	!^ericoc\.com$			[NC]
+RewriteRule	^(.*)$		https://ericoc.com/$1		[R=301]
 
 # Enforce SSL
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://ericoc.com%{REQUEST_URI} [R=301]
+RewriteCond	%{HTTPS}	off
+RewriteRule	(.*)		https://ericoc.com%{REQUEST_URI}	[R=301]
 
 # Rewrite /about, /projects and /resume to /?eoc=<whichever>
-RewriteRule ^(about|projects|resume)(/|\.html)?$ /?eoc=$1
-
-# Rewrite /indego(/?) to /indego.php
-RewriteRule ^indego(/?)$ /indego.php
-
-# Rewrite bike emoji to /indego.php
-RewriteRule ^🚲$ /indego.php
+RewriteRule	^(about|projects|resume)(/|\.html)?$	/?eoc=$1
