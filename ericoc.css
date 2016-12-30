@@ -1,7 +1,7 @@
 h1 {
 	margin:			auto;
 	text-align:		center;
-	font-size:		4em;
+	font-size:		5em;
 	color:			#000;
 	text-decoration:	none;
 }
@@ -9,7 +9,6 @@ h1 {
 #logo {
 	margin-top:	1em;
 	font-family:	'Chewy', sans-serif;
-	letter-spacing:	0.5em;
 }
 
 #logo a {
