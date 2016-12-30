@@ -13,16 +13,18 @@ CERTIFICATIONS
 
 BACKGROUND
 
-* Regularly enjoy learning and playing with new things to further my own personal, technical knowledge
-* Self-taught HTML, CSS, PHP, MySQL, Bash, and very familiar with Python as well as Perl
-* Experience using and configuring many Linux network services such as httpd (Apache), nginx, lighttpd, iptables, ntpd, mysqld, bind/named, pptpd, openvpn, postfix, vsftpd, puppet, ansible, and sshd
-* Worked with both Cisco Systems routing and switching equipment and very familiar with the Cisco Internetwork Operating System (IOS)
+* Regularly enjoy learning and playing with new things to further my own technical knowledge
+* Self-taught HTML, CSS, PHP, MySQL, Bash, Ansible, and very familiar with Python as well as Perl
+* Experience using and configuring many Linux network services such as httpd (Apache), Zabbix, nginx, lighttpd, iptables, ntpd, mysqld, bind/named, pptpd, openvpn, postfix, vsftpd, and sshd
+* Worked with both Cisco Systems routing and switching equipment and very comfortable with the Cisco Internetwork Operating System (IOS)
 
 
 EXPERIENCE
 
 Comcast Corporation				Philadelphia, PA
-Linux Engineer					April 2016 - Present
+Linux Engineer (Splunk)				April 2016 - Present
+
+- Perform configuration management using Ansible for servers used in one of the top five largest Splunk installations in the world
 
 Sidecar						Philadelphia, PA
 Linux Systems Administrator			November 2013 - April 2016
