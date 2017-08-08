@@ -2,3 +2,9 @@
 *~
 *.ttf
 csp.php
+*.7z
+*.rar
+*.zip
+*.tar
+*.tgz
+*.tar.gz
