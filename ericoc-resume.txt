@@ -1,57 +1,41 @@
 Eric O'Callaghan
 
 Philadelphia, PA
+https://ericoc.com/
 eric@ericoc.com
-
 
 CERTIFICATIONS
 
-* CompTIA Security+, Network+, and Linux+
-* Hurricane Electric IPv6 Sage
-* Cisco Certified Entry Networking Technician (CCENT)
-
+- CompTIA Security+, Network+, and Linux+
+- Hurricane Electric IPv6 Sage
+- Cisco Certified Entry Networking Technician (CCENT)
 
 BACKGROUND
 
-* Regularly enjoy learning and playing with new things to further my own technical knowledge
-* Self-taught HTML, CSS, PHP, MySQL, Bash, Ansible, and very familiar with Python as well as Perl
-* Experience using and configuring many Linux network services such as httpd (Apache), Zabbix, nginx, lighttpd, iptables, ntpd, mysqld, bind/named, pptpd, openvpn, postfix, vsftpd, and sshd
-* Worked with both Cisco Systems routing and switching equipment and very comfortable with the Cisco Internetwork Operating System (IOS)
-
+- I love learning about new technology and furthering my knowledge by maintaining personal Debian servers. I enjoy installing, configuring, and managing various software.
+- I have significant experience using HTML, CSS, PHP, MySQL, Bash, and am familiar with Python as well as Perl. My personal projects primarily depend upon PHP and MySQL, along with HTML/CSS. However, I don't consider myself a web designer or programmer - I love the command line and systems administration.
+- I have an interest in network security and take pride in securing any software and servers that I set up. I have also worked with Cisco Systems routing as well as switching equipment and am very familiar with Cisco Internetwork Operating System (IOS). I was previously a Cisco Certified Entry Networking Technician (CCENT).
 
 EXPERIENCE
 
-Comcast Corporation				Philadelphia, PA
-Linux Engineer (Splunk)				April 2016 - Present
-
+Comcast Corporation		Philadelphia, PA
+Linux Engineer (Splunk)		April 2016 - Present
 - Perform configuration management using Ansible for servers used in one of the top five largest Splunk installations in the world
 
-Sidecar						Philadelphia, PA
-Linux Systems Administrator			November 2013 - April 2016
-
+Sidecar				Philadelphia, PA
+Linux Systems Administrator	November 2013 - April 2016
 - Primary duties included response to any infrastructure issues as well as decision-making for all server modifications
-- Responsible for maintaining multiple separate database environments that each included replication configurations between co-located hardware and Amazon Web Services (AWS)
+Responsible for maintaining multiple separate database environments that each included replication configurations between co-located hardware and Amazon Web Services (AWS)
 
-URBN, Inc					Philadelphia, PA
-Linux Systems Administrator			September 2012 - November 2013
-
+URBN, Inc				Philadelphia, PA
+Linux Systems Administrator	September 2012 - November 2013
 - Worked with a team to deploy, configure, manage, and maintain servers responsible for hosting UrbanOutfitters.com as well as Anthropologie.com
-- Participated in an 24/7 on-call rotation responsible for maintaining any and all operational aspects of the e-commerce infrastructure for the above two websites
+Participated in an 24/7 on-call rotation responsible for maintaining any and all operational aspects of the e-commerce infrastructure for the above two websites
 
-Linode, LLC					Galloway, NJ
-Linux Technical Support				July 2010 - August 2012
-
-- Provided quick and helpful technical support to a large number of customers via telephone, e-mail, and support tickets which involved troubleshooting a wide variety of issues including routing inconsistencies between numerous transit providers across the world
-- Regularly communicated with international datacenters while reacting quickly to service-affecting emergencies
-
-Patient Advocation Foundation			Newport News, VA
-IT Intern					March - April 2010
-
-- Created multiple, interactive web applications using PHP and MySQL which eased the management of data for both the Lead Web Developer and Human Resources department
-- Helped set up a small, on-site datacenter as the company moved to a new office location
-
+Linode, LLC			Galloway, NJ
+Linux Technical Support		July 2010 - August 2012
+- Provided quick and helpful technical support to a significant number of customers via telephone, e-mail, and support tickets which involved troubleshooting a wide variety of issues including routing inconsistencies between numerous transit providers across the world
 
 EDUCATION
-
 ECPI University					Newport News, VA
 Networking & Security Management (A.A.S.)	September 2008 - May 2010
