@@ -4,12 +4,6 @@ Philadelphia, PA
 https://ericoc.com/
 eric@ericoc.com
 
-CERTIFICATIONS
-
-- CompTIA Security+, Network+, and Linux+
-- Hurricane Electric IPv6 Sage
-- Cisco Certified Entry Networking Technician (CCENT)
-
 BACKGROUND
 
 - I love learning about new technology and furthering my knowledge by maintaining personal Debian servers. I enjoy installing, configuring, and managing various software.
@@ -36,6 +30,13 @@ Linode, LLC			Galloway, NJ
 Linux Technical Support		July 2010 - August 2012
 - Provided quick and helpful technical support to a significant number of customers via telephone, e-mail, and support tickets which involved troubleshooting a wide variety of issues including routing inconsistencies between numerous transit providers across the world
 
+CERTIFICATIONS
+
+- CompTIA Security+, Network+, and Linux+
+- Hurricane Electric IPv6 Sage
+- Cisco Certified Entry Networking Technician (CCENT)
+
 EDUCATION
+
 ECPI University					Newport News, VA
 Networking & Security Management (A.A.S.)	September 2008 - May 2010
