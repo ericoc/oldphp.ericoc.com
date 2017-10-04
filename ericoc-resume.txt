@@ -6,25 +6,27 @@ eric@ericoc.com
 
 BACKGROUND
 
-- I love learning about new technology and furthering my knowledge by maintaining personal Debian servers. I enjoy installing, configuring, and managing various software.
-- I have significant experience using HTML, CSS, PHP, MySQL, Bash, and am familiar with Python as well as Perl. My personal projects primarily depend upon PHP and MySQL, along with HTML/CSS. However, I don't consider myself a web designer or programmer - I love the command line and systems administration.
-- I have an interest in network security and take pride in securing any software and servers that I set up. I have also worked with Cisco Systems routing as well as switching equipment and am very familiar with Cisco Internetwork Operating System (IOS). I was previously a Cisco Certified Entry Networking Technician (CCENT).
+- I love learning about new technology and furthering my knowledge by maintaining personal Debian servers. I enjoy installing, configuring, and managing various software. I have significant experience using HTML, CSS, PHP, MySQL, Bash, and am familiar with Python.
+- My personal projects primarily depend upon PHP and MySQL, along with HTML/CSS. However, I don't consider myself a web designer or programmer - I love the command line and systems administration.
+- I have an interest in network security and take pride in securing servers. I have also worked with Cisco Systems routing and switching equipment. I am familiar with Cisco Internetwork Operating System (IOS). I was previously a Cisco Certified Entry Networking Technician (CCENT).
+
 
 EXPERIENCE
 
 Comcast Corporation		Philadelphia, PA
-Linux Engineer (Splunk)		April 2016 - Present
-- Perform configuration management using Ansible for servers used in one of the top five largest Splunk installations in the world
+Linux Engineer			April 2016 - Present
+- Perform configuration management using Ansible on servers running one of the top five largest Splunk installations in the world
+- Set up and maintain a Zabbix installation across 30 proxies which are monitoring over 800 hosts
 
 Sidecar				Philadelphia, PA
 Linux Systems Administrator	November 2013 - April 2016
 - Primary duties included response to any infrastructure issues as well as decision-making for all server modifications
-Responsible for maintaining multiple separate database environments that each included replication configurations between co-located hardware and Amazon Web Services (AWS)
+- Responsible for maintaining multiple separate database environments that each included replication configurations between co-located hardware and Amazon Web Services (AWS)
 
 URBN, Inc				Philadelphia, PA
 Linux Systems Administrator	September 2012 - November 2013
 - Worked with a team to deploy, configure, manage, and maintain servers responsible for hosting UrbanOutfitters.com as well as Anthropologie.com
-Participated in an 24/7 on-call rotation responsible for maintaining any and all operational aspects of the e-commerce infrastructure for the above two websites
+- Participated in an 24/7 on-call rotation responsible for maintaining any and all operational aspects of the e-commerce infrastructure for the above two websites
 
 Linode, LLC			Galloway, NJ
 Linux Technical Support		July 2010 - August 2012
