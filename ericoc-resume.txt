@@ -27,7 +27,7 @@ Linux Systems Administrator	November 2013 - April 2016
 - Primary duties included response to any infrastructure issues as well as decision-making for all server modifications
 - Responsible for maintaining multiple separate database environments that each included replication configurations between co-located hardware and Amazon Web Services (AWS)
 
-URBN, Inc				Philadelphia, PA
+URBN, Inc			Philadelphia, PA
 Linux Systems Administrator	September 2012 - November 2013
 - Worked with a team to deploy, configure, manage, and maintain servers responsible for hosting UrbanOutfitters.com as well as Anthropologie.com
 - Participated in an 24/7 on-call rotation responsible for maintaining any and all operational aspects of the e-commerce infrastructure for the above two websites
