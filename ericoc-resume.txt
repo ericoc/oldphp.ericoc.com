@@ -4,11 +4,16 @@ Philadelphia, PA
 https://ericoc.com/
 eric@ericoc.com
 
+SKILLS
+
+- Linux		- Bash		- Ansible	- Redis
+- Zabbix	- Networking	- DNS		- Splunk
+- Apache	- PHP		- Security	- MySQL
+
 BACKGROUND
 
-- I love learning about new technology and furthering my knowledge by maintaining personal Debian servers. I enjoy installing, configuring, and managing various software. I have significant experience using HTML, CSS, PHP, MySQL, Bash, and am familiar with Python.
-- My personal projects primarily depend upon PHP and MySQL, along with HTML/CSS. However, I don't consider myself a web designer or programmer - I love the command line and systems administration.
-- I have an interest in network security and take pride in securing servers. I have also worked with Cisco Systems routing and switching equipment. I am familiar with Cisco Internetwork Operating System (IOS). I was previously a Cisco Certified Entry Networking Technician (CCENT).
+- I enjoy learning about new technology and furthering my knowledge by maintaining personal Linux servers. I have fun installing, configuring, and managing various software.
+- My personal projects primarily depend upon PHP and MySQL. However, I do not consider myself a developer - I prefer the command line and systems administration.
 
 EXPERIENCE
 

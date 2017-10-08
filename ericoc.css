@@ -74,6 +74,10 @@ h1 {
 	color:	#104e8b;
 }
 
+#resskills {
+	column-count:	4;
+}
+
 #reslinks {
 	text-align: center;
 }
