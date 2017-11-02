@@ -1,17 +1,4 @@
 			<h2>
-				<a id="stocks" href="https://github.com/ericoc/old-stock-quotes-php-lib" target="_blank">Stock Quote PHP Library (Deprecated)</a>
-			</h2>
-			<ul>
-				<li>Started: September 9 (Saturday), 2017</li>
-				<li>Deprecated: November 2 (Thursday), 2017</li>
-				<li>Language: PHP</li>
-				<li>I created this PHP library to simplify retrieval of stock quote data using <a href="https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.quote+where+symbol+in+(%27AAPL%27,%27MSFT%27,%27GOOG%27)&format=json&diagnostics=false&env=store://datatables.org/alltableswithkeys" target="_blank">Yahoo's Finance API</a>.</li>
-				<li>The PHP class did its best to minimize HTTPS requests to Yahoo while also caching stock quotes in Redis.</li>
-				<li>Unfortunately, the Yahoo YQL API that this relied upon was discontinued by Yahoo.</li>
-			</ul>
-			<br>
-
-			<h2>
 				<a id="alexa" href="https://github.com/ericoc/alexa-seizuretracker" target="_blank">Amazon Alexa Skill: Seizure Tracker</a>
 			</h2>
 			<ul>
@@ -39,8 +26,28 @@
 			<ul>
 				<li>Started: December 27 (Friday), 2013</li>
 				<li>Langage: Bash</li>
-				<li>I had a chance to write a quick Bash script meant to forward alerts from the <a href="https://www.zabbix.com/" target="_blank">Zabbix</a> monitoring application to the <a href="https://slack.com/" target="_blank">Slack</a> messaging service as I couldn't find an already existing method by which to do so.</li>
-				<li>Since I couldn't find an already existing solution online, I figured I would offer it up to the public even if it is just a short/simple shell script for others to use in case they can't find any thing already online either.</li>
+				<li>I had a chance to write a quick Bash script meant to forward alerts from the <a href="https://www.zabbix.com/" target="_blank">Zabbix</a> monitoring application to the <a href="https://slack.com/" target="_blank">Slack</a> messaging service as I could not find an already existing method by which to do so.</li>
+			</ul>
+			<br>
+
+			<hr>
+			<br>
+
+			<h2 id="deprecated">
+				Deprecated Projects
+			</h2>
+			<br>
+
+			<h2>
+				<a id="stocks" href="https://github.com/ericoc/old-stock-quotes-php-lib" target="_blank">Stock Quote PHP Library</a>
+			</h2>
+			<ul>
+				<li>Started: September 9 (Saturday), 2017</li>
+				<li>Deprecated: November 2 (Thursday), 2017</li>
+				<li>Language: PHP</li>
+				<li>I created this PHP library to simplify retrieval of stock quote data using <a href="https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.quote+where+symbol+in+(%27AAPL%27,%27MSFT%27,%27GOOG%27)&format=json&diagnostics=false&env=store://datatables.org/alltableswithkeys" target="_blank">Yahoo's Finance API</a>.</li>
+				<li>The PHP class did its best to minimize HTTPS requests to Yahoo while also caching stock quotes in Redis.</li>
+				<li>Unfortunately, the Yahoo YQL API that this relied upon was discontinued by Yahoo.</li>
 			</ul>
 			<br>
 
@@ -49,7 +56,10 @@
 			</h2>
 			<ul>
 				<li>Started: December 2 (Friday), 2011</li>
+				<li>Deprecated: Dec 28 (Sunday), 2014</li>
 				<li>Language: PHP, MySQL, HTML, CSS, JavaScript</li>
 				<li>I originally purchased the domain name "<a href="https://gaw.sh/" target="blank">gaw.sh</a>" as a short address to remember quickly and to have some fun with.</li>
 				<li>However, I eventually realized that it would make a great domain name for a URL shortener so I began creating my own.</li>
+				<li>This was deprecated due to a number of reasons including unmaintainability. URL shorteners attract a large amount of abuse and the public repository no longer matches the numerous changes (such as recaptcha) that were added to avoid continued spam.</li>
+				<li>The website itself will stay up as long as possible, but further changes are not going to be made public since the repository is no longer in-sync.</li>
 			</ul>
