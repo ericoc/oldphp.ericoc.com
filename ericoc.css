@@ -78,8 +78,12 @@ h1 {
 	column-count:	4;
 }
 
+#resskills li {
+	margin-left:	5%;
+}
+
 #reslinks {
-	text-align: center;
+	text-align:	center;
 }
 
 body {
@@ -106,4 +110,12 @@ hr {
 
 p, li {
 	margin-left:	3%;
+}
+
+.projspecs {
+	list-style-type:	circle;
+}
+
+#deprecated {
+	background-color:	#ccc;
 }
