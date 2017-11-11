@@ -17,10 +17,13 @@ BACKGROUND
 
 EXPERIENCE
 
+VILLA Join The Movement		Philadelphia, PA
+Jr. Systems Engineer		November 2017 - Present
+
 Comcast Corporation		Philadelphia, PA
-Linux Engineer			April 2016 - Present
-- Perform configuration management using Ansible on servers running one of the top five largest Splunk installations in the world
-- Set up and maintain a Zabbix installation across 30 proxies which are monitoring over 800 hosts
+Linux Engineer			April 2016 - November 2017
+- Performed configuration management using Ansible on servers running one of the top five largest Splunk installations in the world
+- Set up and maintained a Zabbix installation across 30 proxies which monitored over 800 hosts
 
 Sidecar				Philadelphia, PA
 Linux Systems Administrator	November 2013 - April 2016
