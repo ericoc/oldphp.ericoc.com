@@ -17,9 +17,6 @@ BACKGROUND
 
 EXPERIENCE
 
-VILLA Join The Movement		Philadelphia, PA
-Jr. Systems Engineer		November 2017 - Present
-
 Comcast Corporation		Philadelphia, PA
 Linux Engineer			April 2016 - November 2017
 - Performed configuration management using Ansible on servers running one of the top five largest Splunk installations in the world
