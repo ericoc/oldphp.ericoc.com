@@ -74,15 +74,6 @@ h1 {
 	color:	#104e8b;
 }
 
-#resskills {
-	column-count:	4;
-}
-
-#resskills li {
-	margin-left:		13%;
-	list-style-type:	circle;
-}
-
 #reslinks {
 	text-align:	center;
 }
