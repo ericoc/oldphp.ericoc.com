@@ -12,8 +12,8 @@ RewriteRule	^🚲(/)?(.*)?$			https://xn--h78h.ericoc.com/$2	[R=301,L]
 # Redirect /pictures and /pics to pictures. sub-domain
 RewriteRule	^pic(ture)?s(/)?(.*)?$		https://pictures.ericoc.com/$3	[R=301,L]
 
-# Redirect /resume.{txt,pdf,docx} to HTTPS /ericoc_resume.{txt,pdf,docx}
-RewriteRule	^resume\.(txt|pdf|docx)$	https://ericoc.com/ericoc_resume.$1	[R=301,L]
+# Redirect various different resume file names and formats to the correct actual file
+RewriteRule	^(ericoc\-)?resume\.(txt|pdf|docx|doc)$	https://ericoc.com/ericoc_resume.$2	[R=301,L]
 
 # Redirect to make sure people use "ericoc.com" instead of "www.", the IP, or whatever else
 RewriteCond	%{HTTP_HOST}	!^(localhost|127.0.0.1)$	[NC]
