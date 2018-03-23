@@ -38,6 +38,8 @@ if ( (isset($_SERVER['REDIRECT_STATUS'])) && ($_SERVER['REDIRECT_STATUS'] == '40
 		<title>Eric O'Callaghan<?=$eoctitle; ?></title>
 		<link href="/fonts.css" rel="stylesheet" type="text/css">
 		<link href="/ericoc.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" type="image/png" href="/icon.png">
+		<link rel="apple-touch-icon" href="/icon.png">
 	</head>
 	<body>
 		<div id="logo">
