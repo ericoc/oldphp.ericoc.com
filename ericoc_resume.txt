@@ -1,5 +1,6 @@
+
 Eric O’Callaghan
-Linux Engineer
+Linux Systems Administrator
 
 Philadelphia, PA
 eric@ericoc.com
@@ -13,8 +14,11 @@ I am seeking a technical role, within Philadelphia, at a company with a positive
 
 Experience
 
-Comcast Corporation				Philadelphia, PA
-Linux Engineer					April 2016 - November 2017
+Thomas Jefferson University Hospital (IS&T)        Philadelphia, PA
+Linux Systems Administrator                        April 2018 - Present
+
+Comcast Corporation                                Philadelphia, PA
+Linux Engineer                                     April 2016 - November 2017
 
 - Performed configuration management by writing Ansible roles and playbooks that I ran on nearly 1,000 CentOS servers which hosted one of the top five largest Splunk installations in the world
 - Modified sysctl network and disk I/O settings to utilize servers more efficiently
@@ -23,9 +27,8 @@ Linux Engineer					April 2016 - November 2017
 - Regularly tested TCP/IP connectivity between different VLANs, networks, and data centers throughout the country which required opening JIRA tickets to request firewall changes that I would then validate were completed successfully
 - Ensured consistency of firewall rules as well as server and network settings across hosts in thirty different data centers
 
-
-Sidecar Interactive				Philadelphia, PA
-Linux Systems Administrator			November 2013 - April 2016
+Sidecar Interactive                                Philadelphia, PA
+Linux Systems Administrator                        November 2013 - April 2016
 
 - Being the sole systems administrator for the company, my primary duties included response to any infrastructure issues as well as responsibility for all server modifications and yum/apt updates
 - Maintained multiple database environments that included MySQL replication between co-located Dell and HP hardware, running Ubuntu, and Amazon Web Services (AWS)
@@ -33,9 +36,8 @@ Linux Systems Administrator			November 2013 - April 2016
 - Created and open-sourced a Bash shell script that instantly forwards Zabbix alerts to Slack, which I am proud to say is now used by many members of the Zabbix and Slack online communities
 - Automated deployment of in-house PHP application via “chatops”. In efforts with a co-worker, we set up RunDeck to trigger requests to the Ansible Tower API allowing quick and easy deployment at any time from our teams shared Slack chat
 
-
-Urban Outfitters (URBN, Inc)			Philadelphia, PA
-Linux Systems Administrator			September 2012 - November 2013
+Urban Outfitters (URBN, Inc)                       Philadelphia, PA
+Linux Systems Administrator                        September 2012 - November 2013
 
 - Worked with a team to migrate UrbanOutfitters.com and Anthropologie.com from third-party managed services to in-house physical Solaris and RedHat servers
 - Performed racking, cabling, and physical installation of HP servers within the on-site datacenter
@@ -43,9 +45,8 @@ Linux Systems Administrator			September 2012 - November 2013
 - Deployed internal DNS resolvers within the e-commerce network to improve response times for all website visitors and transactions while also enhancing network security
 - Used Zabbix JMX monitoring to graph HTTP request and response times
 
-
-Linode, LLC					Galloway, NJ
-Linux Technical Support				July 2010 - August 2012
+Linode, LLC                                        Galloway, NJ
+Linux Technical Support                            July 2010 - August 2012
 
 - Provided quick and helpful technical support to a significant number of customers via telephone, e-mail, and support tickets which involved troubleshooting a wide variety of issues including routing inconsistencies between multiple international data centers
 
@@ -56,7 +57,8 @@ Certifications
 - Hurricane Electric IPv6 Sage
 - Cisco Certified Entry Networking Technician (CCENT)
 
+
 Education
 
-ECPI University					Newport News, VA
-Networking & Security Management (A.A.S.)	September 2008 - May 2010
+ECPI University                                  Newport News, VA
+Networking & Security Management (A.A.S.)        September 2008 - May 2010
